@@ -1,5 +1,5 @@
 from utils.api_helpers import APIHelpers
-
+import logging
 
 def test_create_booking():
     data = {

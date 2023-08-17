@@ -1,4 +1,5 @@
 import pytest
+import logging
 from utils.api_helpers import APIHelpers
 
 

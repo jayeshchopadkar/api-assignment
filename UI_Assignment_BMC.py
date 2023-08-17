@@ -4,7 +4,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import logging
 
+logging.basicConfig(filename='execution.log', level=logging.DEBUG,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
+def main():
+    logging.info("Program started")
+    # Your code here
 
 # Launch the browser
 driver = webdriver.Chrome()
@@ -83,3 +90,8 @@ wishlist = driver.find_element(By.ID, "nav-link-wishlist")
 wishlist.click()
 
 print("Product added to wishlist successfully!")
+
+logging.info("Program finished")
+
+if __name__ == "__main__":
+    main()
